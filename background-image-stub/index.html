@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Coming soon...</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="http://fonts.googleapis.com/css?family=Oranienbaum&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<style>
+			*::selection{
+				background: transparent;
+				color: #F57F17;
+			}
+			*::-moz-selection{
+				background: transparent;
+				color: #F57F17;
+			}
+			html, body{
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			.stub {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				text-align: center;
+			}
+			.stub__bg {
+				position: absolute;
+				min-width: 100%;
+				min-height: 100%;
+				-webkit-background-size: cover;
+				     -o-background-size: cover;
+				        background-size: cover;
+				background-position: center 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-image: url('bg.jpg');
+				filter: url('blur.svg#blur');
+				-webkit-filter: blur(5px);
+				filter: blur(5px);
+				filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='5');
+			}
+			.stub__text {
+				position: absolute;
+				display: block;
+				width: 90%;
+				top: 25%;
+				left: 50%;
+				margin-left: -45%;
+				margin-top: 0;
+				text-align: center;
+				font-family: 'Oranienbaum', Georgia, Times, "Times New Roman", serif;
+				font-size: 100px;
+				line-height: 1;
+				color: #FBC02D;
+				font-weight: normal;
+				text-shadow: 2px 2px 2px #212121;
+			}
+			.overlay {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				min-height: 100%;
+				padding: 10% 20px;
+				background-color: transparent;
+				background-color: rgba(43, 43, 43, 0.35);
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+				zoom: 1;
+				background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAAZSURBVHjaYmCAAGM0GjfHGEMGAAAA//8DACm0ATMe8beGAAAAAElFTkSuQmCC");
+				background-repeat: repeat;
+				background-attachment: fixed;
+				box-shadow: inset 0 3px 3px -2px #000, inset 0 -3px 3px -2px #000;
+			}
+		</style>
+
+		<div class="stub">
+			<div class="stub__bg"></div>
+	        <div class="overlay">
+	        	<h1 id="fit" class="stub__text">Coming soon...</h1>
+	        </div>
+		</div>
+
+		<script>
+		/*!
+		* FitText.js 1.0 jQuery free version
+		*
+		* Copyright 2011, Dave Rupert http://daverupert.com
+		* Released under the WTFPL license
+		* http://sam.zoy.org/wtfpl/
+		* Modified by Slawomir Kolodziej http://slawekk.info
+		*
+		* Date: Tue Aug 09 2011 10:45:54 GMT+0200 (CEST)
+		*/
+		(function(){
+			var css = function (el, prop) {
+				return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop];
+			};
+
+			var addEvent = function (el, type, fn) {
+				if (el.addEventListener)
+					el.addEventListener(type, fn, false);
+				else
+					el.attachEvent('on'+type, fn);
+			};
+
+			var extend = function(obj,ext){
+				for(key in ext)
+					if(ext.hasOwnProperty(key))
+						obj[key] = ext[key];
+				return obj;
+			};
+
+			window.fitText = function (el, kompressor, options) {
+
+				var settings = extend({
+					'minFontSize' : -1/0,
+					'maxFontSize' : 1/0
+				},options);
+
+				var fit = function (el) {
+					var compressor = kompressor || 1;
+
+					var resizer = function () {
+						el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
+					};
+
+					// Call once to set.
+					resizer();
+
+					// Bind events
+					// If you have any js library which support Events, replace this part
+					// and remove addEvent function (or use original jQuery version)
+					addEvent(window, 'resize', resizer);
+				};
+
+				if (el.length)
+					for(var i=0; i<el.length; i++)
+						fit(el[i]);
+				else
+					fit(el);
+
+				// return set of elements
+				return el;
+			};
+		})();
+		window.fitText( document.getElementById("fit"), 0.8 );
+		</script>
+	</body>
+</html>

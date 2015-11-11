@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/local$
+RewriteCond %{REQUEST_URI} !^/bg.jpg$
+RewriteCond %{REQUEST_URI} !^/blur.svg$
+RewriteRule .* / [L,R=302]

@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/$
+RewriteCond %{REQUEST_URI} !^/local$
+RewriteCond %{REQUEST_URI} !^/favicon.ico$
+RewriteRule .* / [L,R=302]

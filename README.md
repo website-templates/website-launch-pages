@@ -11,6 +11,12 @@ Stub pages with .htaccess config for pre-lunch stage
 
 
 ## Stubs
+
+### Gradient Text stub
+![text stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/gradient-text-stub.jpg)
+
+---
+
 ### Text stub
 ![text stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/text-stub.jpg)
 

@@ -47,10 +47,12 @@
 				-webkit-background-size: cover;
 					 -o-background-size: cover;
 						background-size: cover;
-				background-position: center 0;
+				background-position: center center;
 				background-repeat: no-repeat;
 				background-attachment: fixed;
 				background-image: url('bg.jpg');
+			}
+			.background_blur {
 				filter: url('data:image/svg+xml;utf8,<svg version="1.1" xmlns="http://www.w3.org/2000/svg"><filter id="blur"><feGaussianBlur stdDeviation="5" /></filter></svg>#blur');
 				-webkit-filter: blur(5px);
 				filter: blur(5px);
@@ -61,8 +63,9 @@
 				width: 100%;
 				height: 100%;
 				min-height: 100%;
+				overflow: auto;
 			}
-			.overlay_dots {
+			.overlay_dark {
 				background-color: transparent;
 				background-color: rgba(43, 43, 43, 0.35);
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
@@ -135,12 +138,12 @@
 			}
 		</style>
 		
-		<div class="background background_gradient"></div>
-		<div class="overlay">
-			<main class="project project_top">
-				<h1 id="fit" class="project-name">ProjectName</h1>
+		<div class="background background_image"></div>
+		<div class="overlay overlay_dark">
+			<main class="project project_middle">
+				<h1 id="fit" class="project-name project-name_shadow">ProjectName</h1>
 
-				<ul class="project-pages">
+				<!-- <ul class="project-pages">
 					<li class="project-pages__item">
 						<a href="#" class="project-pages__link">Home Page</a>
 					</li>
@@ -156,7 +159,7 @@
 					<li class="project-pages__item">
 						<a href="#" class="project-pages__link">Contact Page</a>
 					</li>
-				</ul>
+				</ul> -->
 			</main>
 		</div>
 

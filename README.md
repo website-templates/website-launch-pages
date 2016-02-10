@@ -52,7 +52,7 @@ Let's check some examples:
 ### Background image stub with title
 ```html
 <div class="background background_image"></div>
-<div class="overlay overlay_dots">
+<div class="overlay overlay_dark">
     <main class="project project_middle">
         <h1 id="fit" class="project-name project-name_shadow">ProjectName</h1>
     </main>

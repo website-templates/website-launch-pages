@@ -20,27 +20,27 @@ Let's check some examples:
 <div class="background background_gradient"></div>
 <div class="overlay">
     <main class="project project_top">
-        <h1 id="fit" class="project-name">ProjectName</h1>
+        <h1 id="fit" class="project__name">ProjectName</h1>
 
-        <ul class="project-pages">
-            <li class="project-pages__item">
-                <a href="home.html" class="project-pages__link">Home Page</a>
+        <ul class="project__list">
+            <li class="project__item">
+                <a href="home.html" class="project__link">Home Page</a>
             </li>
         </ul>
     </main>
 </div>
 ```
 
-![gradient text list stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/gradient-text-list-stub.jpg)
+![gradient text list stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/gradient-list-stub.jpg)
 
 ---
 
-### Background gradient stub with title
+### Background gradient stub with full-width title
 ```html
 <div class="background background_gradient"></div>
 <div class="overlay">
     <main class="project project_middle">
-        <h1 id="fit" class="project-name">ProjectName</h1>
+        <h1 id="fit" class="project__name">ProjectName</h1>
     </main>
 </div>
 ```
@@ -49,17 +49,37 @@ Let's check some examples:
 
 ---
 
-### Background image stub with title
+### Background image stub with title and list
 ```html
-<div class="background background_image"></div>
+<div class="background background_image background_blur"></div>
 <div class="overlay overlay_dark">
-    <main class="project project_middle">
-        <h1 id="fit" class="project-name project-name_shadow">ProjectName</h1>
+    <main class="project project_top">
+        <h1 id="fit" class="project__name project__name_shadow">ProjectName</h1>
+
+        <ul class="project__list">
+            <li class="project__item">
+                <a href="home.html" class="project__link">Home Page</a>
+            </li>
+        </ul>
     </main>
 </div>
 ```
 
-![background image stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/background-image-stub.jpg)
+![background image stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/background-image-list-stub.jpg)
+
+---
+
+### Background image stub with full-width title
+```html
+<div class="background background_image background_blur"></div>
+<div class="overlay overlay_dark">
+    <main class="project project_middle">
+        <h1 id="fit" class="project__name project__name_fit project__name_shadow">ProjectName</h1>
+    </main>
+</div>
+```
+
+![background image stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/background-image-text-stub.jpg)
 
 ---
 

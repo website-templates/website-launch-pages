@@ -1,6 +1,6 @@
 # Website launch stub
 
-Stub page with .htaccess config for pre-lunch stage
+Stub page with .htaccess config for pre-launch stage
 
 ---
 

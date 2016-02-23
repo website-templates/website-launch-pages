@@ -11,12 +11,12 @@
 			a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,input,ins,kbd,label,legend,li,mark,main,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;border:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}nav ol,nav ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-spacing:0;border-collapse:collapse}button,input[type=submit]{cursor:pointer}
 
 			*::selection{
-				background: #efefef;
-				color: #2b2b2b;
+				background:#f0f0f0;
+				color: #0f0f0f;
 			}
 			*::-moz-selection{
-				background: #efefef;
-				color: #2b2b2b;
+				background:#f0f0f0;
+				color: #0f0f0f;
 			}
 			html, body{
 				width: 100%;
@@ -28,7 +28,7 @@
 				display: block;
 				position: relative;
 				overflow: hidden;
-				text-align: center;				
+				text-align: center;
 			}
 			.background {
 				position: absolute;
@@ -43,7 +43,7 @@
 						background: linear-gradient(170deg, #f1c40f, #ffa500);
 				background-attachment: fixed;
 			}
-			.background_image {				
+			.background_image {
 				-webkit-background-size: cover;
 					 -o-background-size: cover;
 						background-size: cover;
@@ -67,13 +67,13 @@
 			}
 			.overlay_dark {
 				background-color: transparent;
-				background-color: rgba(43, 43, 43, 0.35);
+				background-color: rgba(15, 15, 15, 0.45);
 				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
 				zoom: 1;
 				background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDoAABSCAABFVgAADqXAAAXb9daH5AAAAAZSURBVHjaYmCAAGM0GjfHGEMGAAAA//8DACm0ATMe8beGAAAAAElFTkSuQmCC");
 				background-repeat: repeat;
 				background-attachment: fixed;
-				box-shadow: inset 0 3px 3px -2px #000, inset 0 -3px 3px -2px #000;
+				box-shadow: inset 0 3px 3px -2px #0f0f0f, inset 0 -3px 3px -2px #0f0f0f;
 			}
 			.project {
 				display: block;
@@ -84,7 +84,7 @@
 				text-align: center;
 			}
 			.project_top {
-				padding: 8% 0;				
+				padding: 8% 0;
 			}
 			.project_middle {
 				padding-top: 20%;
@@ -97,19 +97,19 @@
 				font-family: Tahoma, Verdana, Arial, sans-serif;
 				font-size: 50px;
 				line-height: 1;
-				color: #efefef;
+				color:#f0f0f0;
 				text-align: center;
 			}
 			.project__name_fit {
 				font-size: 200px;
 			}
 			.project__name_shadow {
-				text-shadow: 1px 1px 2px #2b2b2b;
+				text-shadow: 1px 1px 2px #0f0f0f;
 			}
 			.project__list{
 				display: inline-block;
 				list-style: none;
-				color: #efefef;
+				color:#f0f0f0;
 				text-align: center;
 
 			}
@@ -119,13 +119,17 @@
 			.project__item ul,
 			.project__item ol{
 				margin-left: 20px;
+				list-style: none;
 			}
 			.project__link{
 				font-family: Georgia, Times, "Times New Roman", serif;
 				font-size: 25px;
 				line-height: 2;
-				color: #efefef;
+				color:#f0f0f0;
 				outline: none;
+				text-decoration: none;
+				white-space: nowrap;
+				border-bottom: 1px solid#f0f0f0;
 				-webkit-transition: all .5s;
 				   -moz-transition: all .5s;
 					-ms-transition: all .5s;
@@ -136,7 +140,7 @@
 				cursor: default;
 			}
 			.project__link:hover{
-				text-decoration: none;
+				border: none;
 			}
 		</style>
 		
@@ -166,59 +170,7 @@
 		</div>
 
 		<script>
-			/*!
-			* FitText.js 1.0 jQuery free version
-			*
-			* Copyright 2011, Dave Rupert http://daverupert.com
-			* Released under the WTFPL license
-			* http://sam.zoy.org/wtfpl/
-			* Modified by Slawomir Kolodziej http://slawekk.info
-			*
-			* Date: Tue Aug 09 2011 10:45:54 GMT+0200 (CEST)
-			*/
-			(function(){
-				var css = function (el, prop) {
-					return window.getComputedStyle ? getComputedStyle(el).getPropertyValue(prop) : el.currentStyle[prop];
-				};
-				var addEvent = function (el, type, fn) {
-					if (el.addEventListener)
-						el.addEventListener(type, fn, false);
-					else
-						el.attachEvent('on'+type, fn);
-				};
-				var extend = function(obj,ext){
-					for(key in ext)
-						if(ext.hasOwnProperty(key))
-							obj[key] = ext[key];
-					return obj;
-				};
-				window.fitText = function (el, kompressor, options) {
-					var settings = extend({
-						'minFontSize' : -1/0,
-						'maxFontSize' : 1/0
-					},options);
-					var fit = function (el) {
-						var compressor = kompressor || 1;
-						var resizer = function () {
-							el.style.fontSize = Math.max(Math.min(el.clientWidth / (compressor*10), parseFloat(settings.maxFontSize)), parseFloat(settings.minFontSize)) + 'px';
-						};
-						// Call once to set.
-						resizer();
-						// Bind events
-						// If you have any js library which support Events, replace this part
-						// and remove addEvent function (or use original jQuery version)
-						addEvent(window, 'resize', resizer);
-					};
-					if (el.length)
-						for(var i=0; i<el.length; i++)
-							fit(el[i]);
-					else
-						fit(el);
-					// return set of elements
-					return el;
-				};
-			})();
-			window.fitText( document.getElementsByClassName("project__name_fit"), 1 );
+			!function(){var n=function(n,t,e){n.addEventListener?n.addEventListener(t,e,!1):n.attachEvent("on"+t,e)},t=function(n,t){for(key in t)t.hasOwnProperty(key)&&(n[key]=t[key]);return n};window.fitText=function(e,i,o){var a=t({minFontSize:-1/0,maxFontSize:1/0},o),r=function(t){var e=i||1,o=function(){t.style.fontSize=Math.max(Math.min(t.clientWidth/(10*e),parseFloat(a.maxFontSize)),parseFloat(a.minFontSize))+"px"};o(),n(window,"resize",o)};if(e.length)for(var f=0;f<e.length;f++)r(e[f]);else r(e);return e}}(),window.fitText(document.getElementsByClassName("project__name_fit"),1);
 		</script>
 	</body>
 </html>

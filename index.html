@@ -83,24 +83,23 @@
 				margin: 0 auto;
 				text-align: center;
 			}
-			.project_top {
-				padding: 8% 0;
-			}
-			.project_middle {
-				padding-top: 20%;
-			}
 			.project__name {
 				display: block;
 				width: 100%;
-				margin-bottom: 4%;
+				max-width: 480px;
+				margin: 8% auto 4%;
 				padding: 0 2%;
 				font-family: Tahoma, Verdana, Arial, sans-serif;
-				font-size: 50px;
+				font-size: 45px;
 				line-height: 1;
 				color:#f0f0f0;
 				text-align: center;
 			}
+			.project__name_middle {
+				margin-top: 20%;
+			}
 			.project__name_fit {
+				max-width: 100%;
 				font-size: 200px;
 			}
 			.project__name_shadow {
@@ -146,8 +145,8 @@
 		
 		<div class="background background_image background_blur"></div>
 		<div class="overlay overlay_dark">
-			<main class="project project_top">
-				<h1 class="project__name project__name_shadow">ProjectName</h1>
+			<main class="project">
+				<h1 class="project__name project__name_shadow project__name_fit">ProjectName</h1>
 
 				<ul class="project__list">
 					<li class="project__item">

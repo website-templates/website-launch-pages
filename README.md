@@ -6,6 +6,8 @@ Stub page with .htaccess config for pre-launch stage
 
 ##Contents
 * [Page structure](#pge-structure)
+    - [Options](#options)
+    - [Examples](#examples) 
 * [Credits](#credits)
 * [License](#license)
 
@@ -13,13 +15,28 @@ Stub page with .htaccess config for pre-launch stage
 ## Page structure 
 The main part contain a few lines of markup. There was used BEM naming, so we're able to use modifiers and change page's style.
 
-Let's check some examples:
+#### Options
+There you can find classnames of the markup blocks and elements that can be customized using related modifiers:
+          
+* `.background`                      # Page background (transparent) 
+    - `.background_image`            # Set index_bg.jpg as page background
+    - `.background_gradient`         # Set gradient as page background 
+    - `.background_blur`             # Add 5px blur over page background
+* `.overlay`                         # Page overlay (transparent by default)
+    - `.overlay_dark`                # Set half-opaque dark pattern as overlay
+* `.project__name`                   # Page title
+    - `.project__name_middle`        # Set 20% top margin for page title
+    - `.project__name_fit`           # Enable FitText.js for page title
+    - `.project__name_shadow`        # Set text shadow for page title
 
-### Background gradient stub with title and list
+
+#### Examples:
+
+* Background gradient stub with title and list
 ```html
 <div class="background background_gradient"></div>
 <div class="overlay">
-    <main class="project project_top">
+    <main class="project">
         <h1 id="fit" class="project__name">ProjectName</h1>
 
         <ul class="project__list">
@@ -35,12 +52,12 @@ Let's check some examples:
 
 ---
 
-### Background gradient stub with full-width title
+* Background gradient stub with full-width title
 ```html
 <div class="background background_gradient"></div>
 <div class="overlay">
-    <main class="project project_middle">
-        <h1 id="fit" class="project__name">ProjectName</h1>
+    <main class="project">
+        <h1 id="fit" class="project__name project__name_middle">ProjectName</h1>
     </main>
 </div>
 ```
@@ -49,11 +66,11 @@ Let's check some examples:
 
 ---
 
-### Background image stub with title and list
+* Background image stub with title and list
 ```html
 <div class="background background_image background_blur"></div>
 <div class="overlay overlay_dark">
-    <main class="project project_top">
+    <main class="project">
         <h1 id="fit" class="project__name project__name_shadow">ProjectName</h1>
 
         <ul class="project__list">
@@ -69,12 +86,12 @@ Let's check some examples:
 
 ---
 
-### Background image stub with full-width title
+* Background image stub with full-width title
 ```html
 <div class="background background_image background_blur"></div>
 <div class="overlay overlay_dark">
     <main class="project project_middle">
-        <h1 id="fit" class="project__name project__name_fit project__name_shadow">ProjectName</h1>
+        <h1 id="fit" class="project__name project__name_middle project__name_fit project__name_shadow">ProjectName</h1>
     </main>
 </div>
 ```

@@ -1,6 +1,6 @@
-# Website launch stub
+# Website launch page
 
-Stub page with .htaccess config for pre-launch stage
+Placeholder page with .htaccess config for pre-launch stage
 
 ---
 
@@ -32,7 +32,7 @@ There you can find classnames of the markup blocks and elements that can be cust
 
 #### Examples:
 
-* Background gradient stub with title and list
+* Background gradient page with title and list
 ```html
 <div class="background background_gradient"></div>
 <div class="overlay">
@@ -41,18 +41,46 @@ There you can find classnames of the markup blocks and elements that can be cust
 
         <ul class="project__list">
             <li class="project__item">
-                <a href="home.html" class="project__link">Home Page</a>
+                <a class="project__link project__link_empty">Pages</a> 
+                <ul class="project__list">
+                    <li class="project__item">
+                        <a href="home.html" class="project__link">Home Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">About Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Portfolio Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Blog Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Contact Page</a>
+                    </li>
+                </ul>
+            </li>
+             <li class="project__item">
+                <a class="project__link project__link_empty">Blocks</a> 
+                <ul class="project__list">
+                    <li class="project__item">
+                        <a href="button.html" class="project__link">Button</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="form.html" class="project__link">Form</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </main>
 </div>
 ```
 
-![gradient text list stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/gradient-list-stub.jpg)
+![gradient text list page](https://github.com/website-templates/website-launch-pages/blob/master/test_screenshots/gradient-list-page.jpg)
 
 ---
 
-* Background gradient stub with full-width title
+* Background gradient page with full-width title
 ```html
 <div class="background background_gradient"></div>
 <div class="overlay">
@@ -62,11 +90,11 @@ There you can find classnames of the markup blocks and elements that can be cust
 </div>
 ```
 
-![gradient text stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/gradient-text-stub.jpg)
+![gradient text page](https://github.com/website-templates/website-launch-pages/blob/master/test_screenshots/gradient-text-page.jpg)
 
 ---
 
-* Background image stub with title and list
+* Background image page with title and list
 ```html
 <div class="background background_image background_blur"></div>
 <div class="overlay overlay_dark">
@@ -75,18 +103,46 @@ There you can find classnames of the markup blocks and elements that can be cust
 
         <ul class="project__list">
             <li class="project__item">
-                <a href="home.html" class="project__link">Home Page</a>
+                <a class="project__link project__link_empty">Pages</a> 
+                <ul class="project__list">
+                    <li class="project__item">
+                        <a href="home.html" class="project__link">Home Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">About Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Portfolio Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Blog Page</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="#" class="project__link">Contact Page</a>
+                    </li>
+                </ul>
+            </li>
+             <li class="project__item">
+                <a class="project__link project__link_empty">Blocks</a> 
+                <ul class="project__list">
+                    <li class="project__item">
+                        <a href="button.html" class="project__link">Button</a>
+                    </li>
+                    <li class="project__item">
+                        <a href="form.html" class="project__link">Form</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </main>
 </div>
 ```
 
-![background image stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/background-image-list-stub.jpg)
+![background image page](https://github.com/website-templates/website-launch-pages/blob/master/test_screenshots/background-image-list-page.jpg)
 
 ---
 
-* Background image stub with full-width title
+* Background image page with full-width title
 ```html
 <div class="background background_image background_blur"></div>
 <div class="overlay overlay_dark">
@@ -96,7 +152,7 @@ There you can find classnames of the markup blocks and elements that can be cust
 </div>
 ```
 
-![background image stub](https://github.com/website-templates/website-launch-stubs/blob/master/test_screenshots/background-image-text-stub.jpg)
+![background image page](https://github.com/website-templates/website-launch-pages/blob/master/test_screenshots/background-image-text-page.jpg)
 
 ---
 

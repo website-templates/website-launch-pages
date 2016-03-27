@@ -113,56 +113,73 @@
 
 			}
 			.project__item{
+				font-family: Georgia, Times, "Times New Roman", serif;
+				font-size: 25px;
+				line-height: 1;
 				text-align: left;
+				color:#f0f0f0;
 			}
 			.project__item ul,
 			.project__item ol{
 				margin-left: 20px;
+				margin-bottom: 20px;
 				list-style: none;
 			}
 			.project__link{
-				font-family: Georgia, Times, "Times New Roman", serif;
-				font-size: 25px;
-				line-height: 2;
+				display: inline-block;
+				margin-bottom: 20px;
 				color:#f0f0f0;
 				outline: none;
 				text-decoration: none;
 				white-space: nowrap;
 				border-bottom: 1px solid#f0f0f0;
-				-webkit-transition: all .5s;
-				   -moz-transition: all .5s;
-					-ms-transition: all .5s;
-					 -o-transition: all .5s;
-						transition: all .5s;
 			}
 			.project__link_empty{
+				display: block;
 				cursor: default;
+				border: none;
 			}
 			.project__link:hover{
-				border: none;
+				border-color: transparent;
 			}
 		</style>
 		
 		<div class="background background_image background_blur"></div>
 		<div class="overlay overlay_dark">
 			<main class="project">
-				<h1 class="project__name project__name_shadow project__name_fit">ProjectName</h1>
+				<h1 id="fit" class="project__name project__name_shadow">ProjectName</h1>
 
 				<ul class="project__list">
 					<li class="project__item">
-						<a href="#" class="project__link">Home Page</a>
+						<a class="project__link project__link_empty">Pages</a> 
+						<ul class="project__list">
+							<li class="project__item">
+								<a href="home.html" class="project__link">Home Page</a>
+							</li>
+							<li class="project__item">
+								<a href="#" class="project__link">About Page</a>
+							</li>
+							<li class="project__item">
+								<a href="#" class="project__link">Portfolio Page</a>
+							</li>
+							<li class="project__item">
+								<a href="#" class="project__link">Blog Page</a>
+							</li>
+							<li class="project__item">
+								<a href="#" class="project__link">Contact Page</a>
+							</li>
+						</ul>
 					</li>
-					<li class="project__item">
-						<a href="#" class="project__link">About Page</a>
-					</li>
-					<li class="project__item">
-						<a href="#" class="project__link">Portfolio Page</a>
-					</li>
-					<li class="project__item">
-						<a href="#" class="project__link">Blog Page</a>
-					</li>
-					<li class="project__item">
-						<a href="#" class="project__link">Contact Page</a>
+					 <li class="project__item">
+						<a class="project__link project__link_empty">Blocks</a> 
+						<ul class="project__list">
+							<li class="project__item">
+								<a href="button.html" class="project__link">Button</a>
+							</li>
+							<li class="project__item">
+								<a href="form.html" class="project__link">Form</a>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</main>

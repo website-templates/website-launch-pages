@@ -17,18 +17,19 @@ The main part contain a few lines of markup. There was used BEM naming, so we're
 
 #### Options
 There you can find classnames of the markup blocks and elements that can be customized using related modifiers:
-          
-* `.background`                      # Page background (transparent) 
-    - `.background_image`            # Set index_bg.jpg as page background
-    - `.background_gradient`         # Set gradient as page background 
-    - `.background_blur`             # Add 5px blur over page background
-* `.overlay`                         # Page overlay (transparent by default)
-    - `.overlay_dark`                # Set half-opaque dark pattern as overlay
-* `.project__name`                   # Page title
-    - `.project__name_middle`        # Set 20% top margin for page title
-    - `.project__name_fit`           # Enable FitText.js for page title
-    - `.project__name_shadow`        # Set text shadow for page title
-
+  
+```        
+* .background                      # Page background (transparent) 
+    - .background_image            # Set index_bg.jpg as page background
+    - .background_gradient         # Set gradient as page background 
+    - .background_blur             # Add 5px blur over page background
+* .overlay                         # Page overlay (transparent by default)
+    - .overlay_dark                # Set half-opaque dark pattern as overlay
+* .project__name                   # Page title
+    - .project__name_middle        # Set 20% top margin for page title
+    - .project__name_fit           # Enable FitText.js for page title
+    - .project__name_shadow        # Set text shadow for page title
+```
 
 #### Examples:
 

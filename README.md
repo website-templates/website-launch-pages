@@ -161,4 +161,4 @@ There you can find classnames of the markup blocks and elements that can be cust
 [FitText.js](https://github.com/adactio/FitText.js)
 
 ## License
-[MIT](http://opensource.org/licenses/MIT)
+[MIT](https://github.com/website-templates/website-launch-pages/blob/master/LICENSE.md)
